@@ -1,8 +1,13 @@
 <h2>{{title}}</h2>
 
 <ul>
-  {{#each data as |dat|}}
-    <li>timestamp: {{dat.timestamp}}</li>
-    <li>carbon: {{dat.carbon}}</li>
-  {{/each}}
+  {{#each-in results as |results genmix|}}
+    <li>{{results}}
+        <ol>
+            {{#each genmix as |genmix|}}
+                <li>{{genmix.fuel}} {{genmix.gen_MW}} MW</li>
+            {{/each}}
+        </ol>
+    </li>
+  {{/each-in}}
 </ul>
