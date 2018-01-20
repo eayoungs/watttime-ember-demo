@@ -1,13 +1,13 @@
 <h2>{{title}}</h2>
 
 <ul>
-  {{#each-in results as |results genmix|}}
-    <li>{{results}}
-        <ol>
-            {{#each genmix as |genmix|}}
-                <li>{{genmix.fuel}} {{genmix.gen_MW}} MW</li>
-            {{/each}}
-        </ol>
+  {{#each-in data as |data genmix|}}
+    <li>{{data}}
+      <ol>
+        {{#each genmix as |genmix|}}
+            <li>{{genmix.fuel}} {{genmix.gen_MW}} MW</li>
+        {{/each}}
+      </ol>
     </li>
   {{/each-in}}
 </ul>
